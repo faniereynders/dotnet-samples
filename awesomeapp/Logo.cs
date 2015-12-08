@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 namespace AwesomeApp
 {
 	public static class Logo {
