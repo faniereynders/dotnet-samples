@@ -52,8 +52,19 @@ namespace AwesomeApp
                                    *%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%#,                             
                                          ,(%%%%%%%%%%%%%%%%%%#/.";
 
-		public static string Draw(string OS){
-      var text = $".NET Core <3 {OS}";
+		public static string Draw(){
+      var osName = string.Empty;
+				if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)){
+					osName = "Windows";
+				}
+				else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)){
+					osName = "Mac";
+				}
+				else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)){
+					osName = "Linux";
+				}
+      
+      var text = $".NET Core <3 {osName}";
       var label = text.PadRight(_placeholder.Length);
       var logo = _content.Replace(_placeholder, label);
       
