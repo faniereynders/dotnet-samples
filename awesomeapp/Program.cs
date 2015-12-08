@@ -6,7 +6,7 @@ namespace AwesomeApp
     {
         public static void Main(string[] args)
         {
-            var logo = Logo.Draw(EnvironmentHelpers.OSName);
+            var logo = Logo.Draw();
             Console.WriteLine(logo);
         }
     }
